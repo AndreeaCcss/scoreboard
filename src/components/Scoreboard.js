@@ -24,6 +24,13 @@ export default class Scoreboard extends Component {
     this.setState({ players: updatedPlayers });
   }
 
+  delete = id => {
+    const updatedPlayers = this.state.players.filter(player => {
+        return player.id !== id
+      })
+    this.setState({ players: updatedPlayers });
+  }
+
   addPlayer = (name) => {
     const player = {
       id: Math.round(Math.random()*100000),
@@ -45,7 +52,9 @@ export default class Scoreboard extends Component {
               <Player 
                {...player} 
                key={player.id} 
-               incrementScore={this.incrementScoreOfPlayer}/>
+               incrementScore={this.incrementScoreOfPlayer}
+               delete={this.delete}
+               />
             ))}
         </ul>
         <AddPlayer addPlayer={this.addPlayer} />

@@ -12,15 +12,21 @@ export default class AddPlayer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.addPlayer(this.state.name)
-    this.setState({
-        name: ''
-      });
-  }
+    if(this.state.name.length > 2) {
+        this.props.addPlayer(this.state.name)
+        this.setState({
+            name: ''
+        });
+    }
+    else {
+        alert("Name must have at least two characters")
+        event.preventDefault();
+    }   
+}
 
   handleChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+        [event.target.name]: event.target.value
     });
   };
 

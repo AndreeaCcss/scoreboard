@@ -20,7 +20,7 @@ li.player {
     max-width: 50px;
   }
   
-  li.player button.plus-button {
+  li.player button.plus-button, button.delete-button {
     flex: 1;
     border: 1px solid #ccc;
     font-size: 150%;
