@@ -25,7 +25,7 @@ export default class Player extends Component {
         <p className="name">{ this.props.name } </p>
         <p className="score"> { this.props.score } </p>
         <button className="plus-button" onClick={this.handleClick}>+</button>
-        <button className="delete-button" onClick={this.handleDeleteClick}>-</button>
+        <button className="delete-button" onClick={this.handleDeleteClick}>x</button>
       </li>
     )
   }
