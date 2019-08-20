@@ -19,15 +19,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body, input {
+  font-family: "Orbitron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
